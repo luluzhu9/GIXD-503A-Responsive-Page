@@ -1,0 +1,171 @@
+/* FONTS */
+.jersey-10-charted-regular {
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.noto-serif-khitan-small-script-regular {
+    font-family: "Noto Serif Khitan Small Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+body {
+    background-repeat: no-repeat;
+    background: black url("Assets/blue-optic-fiber.webp") no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.main-text {
+    display: flex;
+}
+
+article p {
+    font-family: "Noto Serif Khitan Small Script", serif;
+    text-align: right;
+    color: white;
+}
+
+h1 {
+    color: red;
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: 175px;
+    margin-left: auto;
+}
+
+.easter-egg {
+    color: black;
+}
+
+.text-2 {
+    z-index: 1;
+}
+
+.jellyfish {
+    width: 300px;
+    position: absolute;
+    white-space: nowrap;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(310%);
+    }
+}
+
+/* BREAKPOINT 1 */
+@media only screen and (max-width: 1200px) {
+    h1 {
+        color: black;
+        font-family: "Jersey 10 Charted", sans-serif;
+        font-size: 175px;
+        margin-left: auto;      
+    }
+
+    body {
+        background: red;
+    }
+
+    .easter-egg {
+        font-size: 300px;
+        color: white;
+    }
+
+    .jellyfish {
+        display: none;
+    }
+
+    .main-text {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1 {
+        color: white;
+        font-family: "Jersey 10 Charted", sans-serif;
+        font-size: 30px;
+        margin-left: auto;
+    }
+
+    .paragraph {
+        position: absolute;
+    }
+
+    article p {
+        font-family: "Noto Serif Khitan Small Script", serif;
+        text-align: right;
+        color: black;
+        line-height: 2px;
+        font-size: 40px;
+    }
+}
+
+/* BREAKPOINT 2 */
+@media only screen and (max-width: 800px) {
+    body {
+        background: white;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    .easter-egg {
+        display: none;
+    }
+
+    .main-text {
+        display: none;
+    }
+
+    .paragraph {
+        display: none;
+    }
+
+    .jellyfish {
+        display: flex;
+        width: 50px;
+        position: absolute;
+        white-space: nowrap;
+        animation: animate 2s linear infinite;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation-direction: alternate-reverse;
+    }
+    
+    @keyframes animate {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        25% {
+            top: 0;
+            right: 0;
+        }
+        50% {
+            bottom: 0;
+            right: 0;
+        }
+        75% {
+            bottom: 0;
+            left: 0;
+        }
+        100% {
+            top: 0;
+            left: 0;
+        }
+    }
+}
